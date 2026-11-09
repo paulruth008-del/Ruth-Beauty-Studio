@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luxe Beauty Studio - Cosmetics, hair salon, manicure and pedicure services.">
+  <title>Luxe Beauty Studio | Beauty & Cosmetics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <a href="#" class="logo">
+      LUXE <span>BEAUTY</span>
+      <small>STUDIO</small>
+    </a>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#shop">Cosmetics</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-button" onclick="showCart()">
+        <span>Cart</span> 🛍️
+        <span id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO LUXE BEAUTY STUDIO</p>
+      <h1>Beauty Begins<br>With <span>You.</span></h1>
+      <p>
+        Discover your beauty with our premium cosmetics,
+        professional hair styling, manicure and pedicure services.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#services" class="btn primary">Explore Services</a>
+        <a href="#booking" class="btn secondary">Book Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="section-heading">
+      <p class="eyebrow">WHO WE ARE</p>
+      <h2>Experience the Art of Beauty</h2>
+      <p>
+        At Luxe Beauty Studio, we bring together beauty,
+        elegance and confidence. From cosmetics to professional
+        salon treatments, we make every visit special.
+      </p>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories section">
+    <div class="section-heading">
+      <p class="eyebrow">OUR BEAUTY WORLD</p>
+      <h2>Explore Our Categories</h2>
+    </div>
+
+    <div class="category-grid">
+      <a href="#shop" class="category-card">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=700" alt="Cosmetics">
+        <h3>Cosmetics</h3>
+      </a>
+
+      <a href="#services" class="category-card">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700" alt="Hair salon">
+        <h3>Hair Salon</h3>
+      </a>
+
+      <a href="#services" class="category-card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700" alt="Manicure">
+        <h3>Manicure</h3>
+      </a>
+
+      <a href="#services" class="category-card">
+        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=700" alt="Pedicure">
+        <h3>Pedicure</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Cosmetics -->
+  <section class="shop section" id="shop">
+    <div class="section-heading">
+      <p class="eyebrow">BEAUTY COLLECTION</p>
+      <h2>Our Cosmetics Shop</h2>
+      <p>Discover products to enhance your natural beauty.</p>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="section-heading">
+      <p class="eyebrow">PAMPER YOURSELF</p>
+      <h2>Our Professional Services</h2>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">💇‍♀️</div>
+        <h3>Hair Salon</h3>
+        <p>Braiding, styling, washing, treatments and wig installation.</p>
+        <a href="#booking">Book Service →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💅</div>
+        <h3>Manicure</h3>
+        <p>Nail cleaning, nail art, gel polish and acrylic nails.</p>
+        <a href="#booking">Book Service →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🦶</div>
+        <h3>Pedicure</h3>
+        <p>Foot spa, nail care, polishing and relaxing treatments.</p>
+        <a href="#booking">Book Service →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💄</div>
+        <h3>Makeup</h3>
+        <p>Professional makeup for weddings, parties and special events.</p>
+        <a href="#booking">Book Service →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="booking section" id="booking">
+    <div class="section-heading">
+      <p class="eyebrow">YOUR BEAUTY APPOINTMENT</p>
+      <h2>Book Your Appointment</h2>
+      <p>Choose your preferred service and appointment time.</p>
+    </div>
+
+    <form id="bookingForm" class="booking-form">
+
+      <div class="form-group">
+        <label for="customerName">Full Name</label>
+        <input type="text" id="customerName" required placeholder="Your name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="07XXXXXXXX">
+      </div>
+
+      <div class="form-group">
+        <label for="service">Choose Service</label>
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option>Hair Braiding</option>
+          <option>Hair Styling</option>
+          <option>Hair Treatment</option>
+          <option>Manicure</option>
+          <option>Pedicure</option>
+          <option>Acrylic Nails</option>
+          <option>Gel Polish</option>
+          <option>Makeup</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" required>
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Payment Method</label>
+        <select id="payment" required>
+          <option value="">Choose payment</option>
+          <option value="M-Pesa">M-Pesa</option>
+          <option value="Cash">Cash at salon</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn primary full">
+        Submit Booking
+      </button>
+
+      <p id="bookingMessage" role="status"></p>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <div class="section-heading">
+      <p class="eyebrow">WE WOULD LOVE TO SEE YOU</p>
+      <h2>Visit Luxe Beauty Studio</h2>
+      <p>Walk-ins are welcome! You can also book your appointment online.</p>
+      <p><strong>Phone:</strong> +254 7XX XXX XXX</p>
+      <p><strong>Location:</strong> Add your salon location here</p>
+      <a href="https://wa.me/254700000000"
+         target="_blank" rel="noopener"
+         class="btn primary">Chat With Us on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>LUXE BEAUTY STUDIO</h2>
+    <p>Beauty, Elegance & Confidence.</p>
+    <p>© 2026 Luxe Beauty Studio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
